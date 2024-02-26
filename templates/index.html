@@ -1,0 +1,51 @@
+{%  extends 'base.html' %}
+
+{%  block head  %}  
+
+{%  endblock  %}
+
+{%  block body  %}  
+
+<div class = "content">
+    <h1 style="text-align: center;">19/01/2024 Interns List</h1>
+    <style>
+        table, th, td {
+          border:1px solid rgb(197, 123, 229);
+        }
+    </style>
+        <body>
+    <table>
+        <tr>
+            <th style="width:25%">Signum</th>
+            <th style="width:30%">Name</th>
+            <th style="width:25%">Strength</th>
+            <th style="width:10%">Added</th>
+            <th style="width:10%">Actions</th>
+        </tr>
+        {% for deets in deets %}
+            <tr>
+                <td>{{deets.signum}}</td>
+                <td>{{deets.name}}</td>
+                <td>{{deets.stren}}</td>
+                <td>{{deets.date_created.strftime('%d-%m-%Y')}}</td>
+                <td>
+                    <a href="/delete/{{deets.id}}">Delete</a>
+                    <br>
+                    <a href="/update/{{deets.id}}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <form action="/" method="POST">
+        <input type="text" id="signum" placeholder="Signum" name="signum">
+        <input type="text" id="name" placeholder="Name" name="name">
+        <input type="text" id="stren" placeholder="Strength" name="stren">
+        <input type="submit" value="Add intern">
+    </form>
+
+    
+
+
+</div>
+{%  endblock  %}

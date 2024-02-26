@@ -1,0 +1,69 @@
+GET Request - Retrieve all details:
+URL: http://localhost:5000/
+Method: GET
+Send the request to retrieve all details.
+
+POST Request - Add a new detail:
+URL: http://localhost:5000/
+Method: POST
+Headers: Set Content-Type to application/x-www-form-urlencoded (since you are using form data).
+Body: Add form data with keys signum, name, and stren and provide the corresponding values.
+Send the request to add a new detail.
+
+GET Request - Retrieve a specific detail:
+URL: http://localhost:5000/update/{id} (replace {id} with the ID of an existing detail)
+Method: GET
+Send the request to retrieve details of a specific ID.
+
+POST Request - Update a detail:
+URL: http://localhost:5000/update/{id} (replace {id} with the ID of an existing detail)
+Method: POST
+Headers: Set Content-Type to application/x-www-form-urlencoded.
+Body: Update the form data with keys signum, name, and stren and provide the updated values.
+Send the request to update the detail.
+
+GET Request - Retrieve all details after updating:
+URL: http://localhost:5000/
+Method: GET
+Send the request to retrieve all details again and verify that the update was successful.
+
+GET Request - Delete a detail:
+URL: http://localhost:5000/delete/{id} (replace {id} with the ID of an existing detail)
+Method: GET
+Send the request to delete a specific detail.
+
+GET Request - Retrieve all details after deletion:
+URL: http://localhost:5000/
+Method: GET
+Send the request to retrieve all details again and verify that the deletion was successful.
+
+
+
+
+Yes, the actions outlined in my previous response are correct for testing the basic CRUD (Create, Read, Update, Delete)
+ operations of your Flask API using Postman. They provide a step-by-step guide for simulating various HTTP 
+requests to interact with your Flask application.
+
+By following those steps, you can use Postman to:
+
+Create new details (POST request).
+Retrieve details (GET request).
+Update existing details (POST request to the update endpoint).
+Delete details (GET request to the delete endpoint).
+These actions cover the fundamental functionality of your Flask application. 
+Adjust the details in Postman, such as the URLs and request data, based on the specific 
+structure and requirements of your Flask API.
+
+
+
+
+
+When you use SQLite, the entire database is contained within a single file, which makes it easy to manage. 
+Your program can directly interact with this file to read, write, and modify data. It's like having a 
+notebook where you can quickly jot down or look up information whenever you need it.
+
+On the other hand, when you use databases like MySQL, they typically run as separate server processes 
+that are not directly embedded within your program. This means your program needs to communicate with the
+ MySQL server over a network connection, which adds an extra layer of complexity. It's like having a 
+separate office building where your files are stored,
+ and you need to send requests to access or modify the files through an intermediary.
